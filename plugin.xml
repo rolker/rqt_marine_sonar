@@ -1,0 +1,12 @@
+<library path="lib/librqt_marine_sonar">
+    <class name="rqt_marine_sonar/MarineEchogramPlugin" type="rqt_marine_sonar::MarineEchogramPlugin" base_class_type="rqt_gui_cpp::Plugin">
+        <description>
+            An interface to view watercolumn sonar data as an echogram or ribbon.
+        </description>
+        <qtgui>
+            <label>Marine Echogram Plugin</label>
+            <icon type="theme">system-help</icon>
+            <statustip>View watercolumn sonar data</statustip>
+        </qtgui>
+    </class>   
+</library>
