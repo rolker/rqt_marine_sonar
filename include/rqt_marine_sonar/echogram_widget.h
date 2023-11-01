@@ -30,8 +30,8 @@ public slots:
   /// Set the distance in meters between pings for display
   void setPingSpacing(float spacing);
 
-  /// Inteval between depth tick marks
-  void setDepthInterval(float intrval);
+  /// Interval between depth tick marks
+  void setDepthInterval(float interval);
 
 
 protected:
