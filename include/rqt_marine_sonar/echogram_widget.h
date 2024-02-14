@@ -17,7 +17,6 @@ public:
   float minimumDB() const;
   float maximumDB() const;
   float pingSpacing() const;
-  float depthInterval() const;
 
 signals:
   void mouseMoved(QPointF position);
@@ -27,12 +26,8 @@ public slots:
   void setMinimumDB(float min_db);
   void setMaximumDB(float max_db);
 
-  /// Set the distance in meters between pings for display
+  /// Set the distance between pings for display
   void setPingSpacing(float spacing);
-
-  /// Interval between depth tick marks
-  void setDepthInterval(float interval);
-
 
 protected:
   void resizeEvent(QResizeEvent* event) override;

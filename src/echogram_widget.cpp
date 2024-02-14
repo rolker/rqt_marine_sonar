@@ -278,12 +278,6 @@ void EchogramWidget::setPingSpacing(float spacing)
   }
 }
 
-void EchogramWidget::setDepthInterval(float interval)
-{
-  depth_axis_->setTickInterval(interval);
-}
-
-
 float EchogramWidget::minimumDB() const
 {
   return min_db_;
@@ -297,11 +291,6 @@ float EchogramWidget::maximumDB() const
 float EchogramWidget::pingSpacing() const
 {
   return ping_spacing_;
-}
-
-float EchogramWidget::depthInterval() const
-{
-  return depth_axis_->tickInterval();
 }
 
 } // namespace rqt_marine_sonar

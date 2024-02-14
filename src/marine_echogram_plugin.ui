@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>774</width>
-    <height>440</height>
+    <width>577</width>
+    <height>388</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -89,29 +89,6 @@
         </property>
         <property name="value">
          <double>1.000000000000000</double>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="depthIntervalLabel">
-        <property name="text">
-         <string>Depth Interval</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QDoubleSpinBox" name="depthIntervalDoubleSpinBox">
-        <property name="minimum">
-         <double>1.000000000000000</double>
-        </property>
-        <property name="maximum">
-         <double>1000.000000000000000</double>
-        </property>
-        <property name="singleStep">
-         <double>10.000000000000000</double>
-        </property>
-        <property name="value">
-         <double>100.000000000000000</double>
         </property>
        </widget>
       </item>

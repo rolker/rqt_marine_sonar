@@ -50,7 +50,7 @@ endif()
 catkin_package(
   INCLUDE_DIRS ${rqt_marine_sonar_INCLUDE_DIRECTORIES}
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS roscpp rqt_gui_cpp rqt_gui marine_acoustic_msgs
+  CATKIN_DEPENDS roscpp rqt_gui_cpp rqt_gui libqt5-charts-dev marine_acoustic_msgs
 #  DEPENDS system_lib
 )
 

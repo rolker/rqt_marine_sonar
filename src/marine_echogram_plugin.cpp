@@ -20,7 +20,6 @@ void MarineEchogramPlugin::initPlugin(qt_gui_cpp::PluginContext& context)
   connect(ui_.minDbDoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &MarineEchogramPlugin::on_minDbDoubleSpinBox_valueChanged);
   connect(ui_.maxDbDoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &MarineEchogramPlugin::on_maxDbDoubleSpinBox_valueChanged);
   connect(ui_.pingSpacingDoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &MarineEchogramPlugin::on_pingSpacingDoubleSpinBox_valueChanged);
-  connect(ui_.depthIntervalDoubleSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &MarineEchogramPlugin::on_depthIntervalDoubleSpinBox_valueChanged);
     
   context.addWidget(widget_);
     
@@ -54,7 +53,6 @@ void MarineEchogramPlugin::saveSettings(qt_gui_cpp::Settings& plugin_settings, q
   instance_settings.setValue("minimum_db", ui_.echogramWidget->minimumDB());
   instance_settings.setValue("maximum_db", ui_.echogramWidget->maximumDB());
   instance_settings.setValue("ping_spacing", ui_.echogramWidget->pingSpacing());
-  instance_settings.setValue("depth_interval", ui_.echogramWidget->depthInterval());
 }
 
 void MarineEchogramPlugin::restoreSettings(const qt_gui_cpp::Settings& plugin_settings, const qt_gui_cpp::Settings& instance_settings)
@@ -73,12 +71,10 @@ void MarineEchogramPlugin::restoreSettings(const qt_gui_cpp::Settings& plugin_se
   ui_.echogramWidget->setMinimumDB(instance_settings.value("minimum_db", -100.0).toFloat());
   ui_.echogramWidget->setMaximumDB(instance_settings.value("maximum_db", 10.0).toFloat());
   ui_.echogramWidget->setPingSpacing(instance_settings.value("ping_spacing", 1.0).toFloat());
-  ui_.echogramWidget->setDepthInterval(instance_settings.value("depth_interval", 100.0).toFloat());
 
   ui_.minDbDoubleSpinBox->setValue(ui_.echogramWidget->minimumDB());
   ui_.maxDbDoubleSpinBox->setValue(ui_.echogramWidget->maximumDB());
   ui_.pingSpacingDoubleSpinBox->setValue(ui_.echogramWidget->pingSpacing());
-  ui_.depthIntervalDoubleSpinBox->setValue(ui_.echogramWidget->depthInterval());
 }
 
 
@@ -165,11 +161,6 @@ void MarineEchogramPlugin::on_maxDbDoubleSpinBox_valueChanged(double value)
 void MarineEchogramPlugin::on_pingSpacingDoubleSpinBox_valueChanged(double value)
 {
   ui_.echogramWidget->setPingSpacing(value);
-}
-
-void MarineEchogramPlugin::on_depthIntervalDoubleSpinBox_valueChanged(double value)
-{
-  ui_.echogramWidget->setDepthInterval(value);
 }
 
 
